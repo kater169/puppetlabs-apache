@@ -83,7 +83,7 @@ class apache (
     package { 'httpd':
       ensure => $package_ensure,
       name   => $::apache::params::apache_name,
-      notify => Class['Apache::Service'],
+      notify => Class['apache::service'],
     }
   }
   validate_re($sendfile, [ '^[oO]n$' , '^[oO]ff$' ])
