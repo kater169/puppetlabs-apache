@@ -61,7 +61,7 @@ LogFormat "<%= format -%>" <%= nickname %>
   <%- end -%>
 <% end -%>
 
-<%- if @apache_version >= '2.4' -%>
+<%- if @apache_version >= 2.4 -%>
 IncludeOptional "<%= @confd_dir %>/*.conf"
 <%- else -%>
 Include "<%= @confd_dir %>/*.conf"
